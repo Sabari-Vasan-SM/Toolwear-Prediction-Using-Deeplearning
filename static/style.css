@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #f0f8ff;
+    color: #333;
+}
+h1 {
+    color: #4b0082;
+}
+input[type="file"], input[type="submit"] {
+    margin: 10px 0;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tool Wear Prediction</title>
+</head>
+<body>
+  <h2>Upload Tool Data CSV</h2>
+  
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv" required><br><br>
+    <button type="submit">Predict</button>
+
+  </form>
+
+  {% if predictions %}
+    <h3>Predicted Tool Conditions:</h3>
+    <ul>
+      {% for label in predictions %}
+        <li>{{ label }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>
